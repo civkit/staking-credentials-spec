@@ -15,28 +15,26 @@ financial contracts or accessing CivKit functionary services. Contract providers
 and thresholds of assets with precision to achieve a satisfactory level of risk, combining monetary 
 and reputation-based strategies.
 
-Staking Credentials approach is the following: the clients presents a basket of scarce assets
-(Lightning preimage, stakes certificates) and blinded credentials to the issuance server, the credentials
-are authenticated and yeilded back to the client. Once unblinded the credentials can be used to fulfill
-a contract or service request towards a service provider server. The credentials are anonymous in
-the sense that a given credential cannot be linked to the protocol instance in which that credential
-was initially issued.
+The Staking Credentials approach involves clients presenting a basket of scarce assets 
+(Lightning preimage, stake certificates) and blinded credentials to the issuance server. The credentials 
+are then authenticated and returned to the client. Once unblinded, the credentials can be used to fulfill 
+a contract or service request with a service provider server. These credentials are anonymous, as a given 
+credential cannot be linked to the protocol instance in which it was initially issued.
 
-The Staking Credentials architecture consists of two protocols: credentials issuance and redemption.
-The issuance protocol runs between two endpoints referred to as Requester and Issuer and one
-function: Credential Authentication. The entity that implements the Credential Authentication,
-referred to as the Issuer, is responsible for counter-signing the credentials in response to requests
-from Requester. Issuer might accept different base assets in function of their risk strategy, and
-the overhead cost they would like to transfer on the Committer for answering a contract or service
-request. Requester and Issuer can agree on an Authentication method in function of the cryptographic
-properties aimed for.
+The Staking Credentials architecture comprises two protocols: credential issuance and redemption. The issuance 
+protocol operates between two endpoints, known as the Requester and Issuer, and includes one function: Credential 
+Authentication. The entity implementing Credential Authentication, referred to as the Issuer, is responsible for 
+countersigning the credentials in response to requests from the Requester. Issuers may accept different base 
+assets depending on their risk strategy and the overhead costs they wish to transfer to the Committer for 
+fulfilling a contract or service request. Requesters and Issuers can agree on an authentication method 
+based on the desired cryptographic properties.
 
-The redemption protocol runs between two endpoint reffered to as Client and Provider and
-one function: Credential Consumption. The entity that implements the Credential Consumption, referred
-to as the Client, is responsible to provide an authenticated Credential covering the contract risk
-service request risk, as defined by the Provider. A Client can be a Provider, but those entities
-can be also dissociated. An Issuer can be a Provider, but those entities can be also dissociated.
-A Client can aggregate authenticated Credentials from multiple Requesters.
+The redemption protocol runs between two endpoints, referred to as the Client and Provider, and involves 
+one function: Credential Consumption. The entity implementing Credential Consumption, known as the Client, 
+is responsible for providing an authenticated credential that covers the contract risk or service request 
+risk, as defined by the Provider. A Client can also be a Provider, but these entities can be separate as well. 
+Similarly, an Issuer can be a Provider, but they can also be distinct entities. A Client can aggregate 
+authenticated credentials from multiple Requesters.
 
 The credentials issuance and redemption protocols operate in concert as shown in the figure below:
 

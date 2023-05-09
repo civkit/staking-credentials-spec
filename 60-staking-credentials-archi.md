@@ -8,12 +8,12 @@ This draft is version 0.0.1 of the Staking Credentials architecture.
 
 ## Introduction
 
-Staking Credentials is an architecture for Bitcoin financial contracts based on anonymous credentials.
-Those credentials are not only unlinking their issuance from their consumption, but also allows the
-user staking of credentials to downgrade the costs of entering in future Bitcoin financial contracts
-or accessing Civkit functionary services. The quality and thresholds of assets can be selected with
-granularity by the contract provider to achieve a satisfying level of risks, combining monetary and
-reputation strategies.
+Staking Credentials is an architecture designed for Bitcoin financial contracts, which is based on 
+anonymous credentials. These credentials not only unlink their issuance from their consumption, 
+but also allow users to stake credentials, reducing the costs associated with entering future Bitcoin 
+financial contracts or accessing CivKit functionary services. Contract providers can select the quality 
+and thresholds of assets with precision to achieve a satisfactory level of risk, combining monetary 
+and reputation-based strategies.
 
 Staking Credentials approach is the following: the clients presents a basket of scarce assets
 (Lightning preimage, stakes certificates) and blinded credentials to the issuance server, the credentials

@@ -86,9 +86,9 @@ that work in concert for credentials issuance and redemption.
 
 ## Credentials Issuance
 
-The credentials issuance is an authorization protocol wherein the Requester presents scarce asset and
-blinded credentials to the Issuer for authorization. Usually, the rate of scarce assets to credentials
-as placed by the Issuer should have been discovered by the Committer in non-defined protocol phase.
+The credential issuance is an authorization protocol in which the Requester presents scarce assets and blinded credentials to the Issuer 
+for approval. Typically, the exchange rate of scarce assets to credentials, as determined by the Issuer, should have been discovered by the 
+Committer during a non-specific protocol phase.
 
 There are a number of scarce assets that can serve, including (non-limited):
 - proof-of-payment (e.g Lightning preimage or on-chain txid)
@@ -154,12 +154,11 @@ be defined in its own document.
 
 ## Redemption
 
-The redemption protocol is an identification protocol wherein the Client presents authenticated credentials
-to the Provider to redeem the acceptance of a contract. The credentials should be unblinded before to be
-presented to the Provider. The quantity of credentials attached to the contract request should
-satisfy the contract liquidity units as enforced by the Contract Provider. Usually, the rate of credentials
-to contract/service unit announced by the Provider should have been discovered by the Committer in a non-defined
-protocol phase.
+The redemption protocol is an identification process in which the Client presents authenticated credentials to the 
+Provider in order to redeem acceptance of a contract. The credentials must be unblinded before being presented to the 
+Provider. The number of credentials attached to the contract request should meet the contract liquidity units required 
+by the Contract Provider. Generally, the exchange rate of credentials to contract/service units, as announced by the 
+Provider, should have been discovered by the Committer during an unspecified protocol phase.
 
 The protocol works as in the figure below:
 
@@ -185,10 +184,10 @@ executed.
 
 ### Redemption Protocol Extensibility
 
-The Staking Credentials and redemption protocol are both intended to be receptive to extensions that expand
-the current set of functionalities through new types or modes of Bitcoin financial contracts covered. Among them,
-long-term held contracts based on a timelock exceeding the usual requirements of Lightning payments.
-Another type of flow is the correction of the opening asymmetries in multi-party Lightning channels funding transactions.
+The Staking Credentials and redemption protocols are both designed to be adaptable to extensions that enhance the current set of functionalities by 
+introducing new types or modes of Bitcoin financial contracts coverage. Among these are long-term contracts based on a timelock that exceeds the 
+typical requirements of Lightning payments. Another potential application is the adjustment of opening asymmetries in multi-party Lightning channel 
+funding transactions.
 
 ## Deployment Considerations
 
@@ -217,18 +216,16 @@ This model is shown below:
 
 ## Security Considerations
 
-The major security risk from an Issuer perspective is the double-spend of the credentials by a Client. In
-the context of the Staking Credential architecture, a double-spend is the replay of credential for multiple
-Contract requests, therefore provoking a plain timevalue loss if contract fees are not paid by the Client for
-each Contract request instance.
+A significant security risk from the Issuer's perspective is the potential double-spending of credentials by a Client. Within the context of the 
+Staking Credential architecture, double-spending refers to the reuse of a credential for multiple contract requests, which can result in a direct 
+loss of time value if contract fees are not paid by the Client for each individual contract request.
 
-The Issuer should keep a private database to log every credential covering a Contract request. This private
-database should be accessible by the Contract Provider to validate all the credentials presented for a Contract
-request.
+To mitigate this risk, the Issuer should maintain a private database to log every credential associated with a contract request. This private database 
+should be accessible to the Contract Provider, allowing them to validate all credentials submitted for a contract request.
 
-A major security risk from a Committer perspective is the tampering of the credentials during transport between
-the Committer and Issuers hosts. Credentials could be hijacked based on credentials volume traffic monitoring. As
-such credentials transport should be authenticated and the packets obfuscate against network-level inspection.
+From the Committer's perspective, a major security risk involves the tampering of credentials during transmission between the Committer and Issuer 
+hosts. Credentials could be compromised based on monitoring of credential volume traffic. To address this issue, credential transport should be 
+authenticated, and packets should be obfuscated to protect against network-level inspection.
 
 ## References
 
